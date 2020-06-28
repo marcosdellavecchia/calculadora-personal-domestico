@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Calculadora de sueldo para personal de casas particulares</title>
+  </head>
+  
+  <body>
+    <div class="contenedor">
+      <div class="top-bar">
+        <p>
+          Personal Auxiliar de Casas Particulares
+        </p>
+      </div>
+      <div class="middle-bar">
+        <img class="logo-argentina" src="logo-arg.png">
+        <p>Régimen de servicio doméstico</p>
+      </div>
+      <div class="jumbotron">
+        <div class="overlay"></div>
+        <div class="inner">
+          <h1>Calculadora de sueldo: Personal doméstico</h1>
+          <p>Esta herramienta permite determinar el sueldo de una empleada doméstica (o de cualquier
+          personal incluído en el régimen de casas particulares) en forma proporcional a las horas
+          trabajadas, tomando como referencia el sueldo mensual por jornada completa.</p>
+        <p>De acuerdo a la Resolución 1/2020 de la CNTCP, está permitido proporcionar el sueldo cuando
+          la jornada laboral supera las 24 horas semanales.</p>
+      </div>
+
+    </div>
+    <fieldset>
+      <!-- Seleccionar modalidad de trabajo -->
+      <p>Ingrese modalidad de trabajo </p>
+      <div class="select-option">
+        <select name="modalidad_trabajo" id="modalidad_trabajo">
+          <option value='blank'>Seleccionar modalidad: </option>
+          <option value='sin_retiro'>Sin retiro</option>
+          <option value='con_retiro'>Con retiro</option>
+        </select>
+      </div>
+      <!-- Categorías de trabajo para modalidad con retiro -->
+      <p id="categoria_trabajo" style="display:none">Ingrese categoría de servicio doméstico </p>
+      <div class="select-option">
+        <select name="con_retiro" id="con_retiro" style="display:none">
+          <option value=0>Seleccionar categoría: </option>
+          <option value=21818.50>1. Supervisor/a</option>
+          <option value=20270.50>2. Personal para tareas específicas</option>
+          <option value=19777>3. Caseros</option>
+          <option value=19777>4. Asistencia y cuidado de personas</option>
+          <option value=17785.50>5. Personal para tareas generales</option>
+        </select>
+      </div>
+      <!-- Categorías de trabajo para modalidad sin retiro -->
+      <div class="select-option">
+        <select name="sin_retiro" id="sin_retiro" style="display:none">
+          <option value=0>Elegir categoría: </option>
+          <option value=24303.50>1. Supervisor/a</option>
+          <option value=22564.50>2. Personal para tareas específicas</option>
+          <option value=19777>3. Caseros</option>
+          <option value=22039.50>4. Asistencia y cuidado de personas</option>
+          <option value=19777>5. Personal para tareas generales</option>
+        </select>
+      </div>
+      <!-- Horas semanales trabajadas -->
+      <p style="display:none" id="label_horas_trabajadas">Ingresar cantidad de horas trabajadas por semana </p>
+      <div class="horas-contenedor">
+        <input type="number" id="horas_trabajadas" style="display:none;">
+      </div>
+      <!-- Botón para calcular sueldo proporcional -->
+      <div class="boton-contenedor">
+        <p>
+          <a class="icon document color button" type="submit" id="boton_calcular" value="Calculate"
+            style="display:none;">
+            CALCULAR</a>
+      </div>
+      </p>
+      <p class='result' id="textDiv"></p>
+  </div>
+
+  </fieldset>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-color: #f2f3f4;
+}
+
+/* -------------- Barras header -------------- */
+
+.top-bar {
+  background-color: #0072bb;
+  width: 100%;
+  height: 51px;
+}
+
+.top-bar p {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0072bb;
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  margin-left: 20px;
+  line-height: 51px;
+}
+
+.middle-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  background-color: #ffffff;
+  width: 100%;
+  height: 72px;
+}
+
+.middle-bar > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.logo-argentina {
+  width: 35px;
+  margin-left: 20px;
+}
+
+/* -------------- Banner -------------- */
+
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  position: relative;
+  background-image: url(banner.jpg);
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  width: 100%;
+  height: 372px;
+  color: #ffffff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  margin-top: 0;
+  text-transform: none;
+}
+
+.jumbotron > .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.jumbotron > .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.inner > h1 {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+}
+
+.inner > p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+fieldset {
+  background-color: #ffffff;
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  position: relative;
+  border: 1px groove;
+  border-color: #eeeeee;
+}
+
+fieldset > p {
+  text-align: center;
+  color: #343434;
+}
+
+/*select*/
+
+.select-option select,
+.select-option select {
+  background: #e4e4e4;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 30px;
+  line-height: 40px;
+  padding-left: 10px;
+  border-radius: none;
+  margin-bottom: 5px;
+  -moz-appearance: none;
+  color: #707070;
+}
+
+/*parrafos*/
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+p.result {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #0072bb;
+  font-size: 35px;
+}
+
+/*number*/
+
+.horas-contenedor {
+  text-align: center;
+  padding: 5px;
+}
+
+input[type="number"] {
+  font-size: 1em;
+  width: 7em;
+  padding: 3px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+/* -------------- Elimina arrows del imput number -------------- */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* -------------- Botón Calcular -------------- */
+
+.boton-contenedor {
+  text-align: center;
+}
+
+.button,
+.buttonbar a {
+  position: relative;
+  width: 120px;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: all 0.2s;
+  background: #0072bb;
+}
+
+.button:hover {
+  background: #efefef;
+}
+
+/* -------------- Colores -------------- */
+
+a.color {
+  color: #ffffff;
+  border: solid 1px #343434;
+  background-color: #0072bb;
+}
+
+/* Media queries */
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .inner > h1 {
+    font-size: 28px !important;
+  }
+
+  .inner > p {
+    font-size: 13px !important;
+  }
+
+  .jumbotron > .inner {
+    width: 95% !important;
+  }
+
+  fieldset {
+    width: 90% !important;
+  }
+}
+
+/* Tablets y desktop */
+@media only screen and (max-width: 1024px) {
+  .inner > h1 {
+    font-size: 36px;
+  }
+
+  .inner > p {
+    font-size: 16px;
+  }
+
+  .jumbotron > .inner {
+    width: 80%;
+  }
+}
